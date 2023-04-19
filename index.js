@@ -1,11 +1,24 @@
 const express = require("express")
 const mongoose = require("mongoose")
+
+
+require('dotenv').config();
+
+
+// import express from 'express'
+// import mongoose from 'mongoose'
+// import * as dotenv from "dotenv"
+
+// dotenv.config();
+
+
 const app = express();
 
 
-const url = "mongodb+srv://emmanuelgodwin558:Youngemmy@cluster0.ydxr6zv.mongodb.net/?retryWrites=true&w=majority"
 
-// const url = process.env.MONGODB_PASS 
+// const url = "mongodb+srv://emmanuelgodwin558:Youngemmy@cluster0.ydxr6zv.mongodb.net/?retryWrites=true&w=majority"
+
+const url = process.env.MONGODB_PASS 
 
 
 async function connect () {
@@ -20,6 +33,6 @@ async function connect () {
 }
 connect();
 
-app.listen(4000, () => {
-    console.log("Server is starting on port 4000")
+app.listen(8000, () => {
+    console.log("Server is starting on port 8000")
 });
